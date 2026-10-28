@@ -46,7 +46,7 @@ jobs:
         uses: docker/login-action@v3
         with:
           username: srihareeshh
-          password: ${{ secrets.DOCKT }}
+          password: ${{ secrets.TOKEN }}
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v6
         with:
