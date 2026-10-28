@@ -52,4 +52,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: srihareesh/agile10:v1
+          tags: srihareesh/temp-container1:v1
