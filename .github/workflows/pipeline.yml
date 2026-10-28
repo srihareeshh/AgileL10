@@ -49,7 +49,9 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKNN }}
+         
+          username: srihareeshh
+        
           password: ${{ secrets.TOKENN }}
 
       - name: Build and Push Docker Image
@@ -57,4 +59,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: srihareesh/agile10:v1
+          tags: |
+            srihareeshh/temp-container1:v${{ github.run_number }}
+            srihareeshh/temp-container1:latest
