@@ -49,13 +49,12 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.NAME }}
-          password: ${{ secrets.TOKEN }}
+          username: ${{ secrets.DOCKN }}
+          password: ${{ secrets.DOCKT }}
 
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v6
         with:
           context: .
           push: true
-          # FIXED: Uses your username secret and the GitHub Run Number to create a unique tag per push (e.g., username/temp-converter:v1, v2)
-          tags: ${{ secrets.NAME }}/temp-converter:v${{ github.run_number }}
+          tags:srihareesh/agile10:v1
